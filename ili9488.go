@@ -505,16 +505,16 @@ type PIN interface {
 	SetOutput()
 }
 
-// NewST7789
+// NewILI9488
 //
-//	@Description: ST7789显示驱动
+//	@Description: ILI9488显示驱动
 //	@param spi SPI通信端口
 //	@param dc 引脚DC
 //	@param rst 引脚RES
 //	@param led 引脚BLK
 //	@param cs 选片引脚
 //	@return *ILI9488
-func NewST7789(spi SPI, dc, rst, led, cs PIN) *ILI9488 {
+func NewILI9488(spi SPI, dc, rst, led, cs PIN) *ILI9488 {
 	s := &ILI9488{
 		spi:    spi,
 		dc:     dc,

@@ -144,7 +144,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("failed to begin gpio: %v", err)
 	}
-	device := ILI9488.NewST7789(
+	device := ILI9488.NewILI9488(
 		&MySpi{},
 		&MyPin{rpio.Pin(17)},
 		&MyPin{rpio.Pin(27)},
